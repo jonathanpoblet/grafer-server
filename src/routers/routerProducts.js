@@ -11,8 +11,8 @@ import {
 export const routerProducts = Router();
 
 routerProducts.get("/", controllerGetProducts);
-// routerProducts.post("/", controllerPostProducts);
-// routerProducts.get("/:identificator", controllerGetProductCollection);
-// routerProducts.put("/addProduct", controllerPutProductCollection);
-// routerProducts.put("/deleteProduct", controllerDeleteProductCollection);
-// routerProducts.post("/sendProduct", controllerPostSendProduct)
+routerProducts.post("/", controllerPostProducts);
+routerProducts.get("/:identificator", controllerGetProductCollection);
+routerProducts.put("/addProduct", controllerPutProductCollection);
+routerProducts.put("/deleteProduct", controllerDeleteProductCollection);
+routerProducts.post("/sendProduct", controllerPostSendProduct)
