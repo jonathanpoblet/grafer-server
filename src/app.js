@@ -10,6 +10,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 app.use(cors({origin: {}}))
 
-app.use("/api/products", routerProducts);
 app.use("/api/contact", routerContact);
+app.use("/api/products", routerProducts);
 app.use("/mpago",routerMPago);
