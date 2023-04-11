@@ -5,7 +5,6 @@ import { transporter } from "../email/index.js";
 
 export async function controllerGetProducts(req, res) {
   const products = await containerProducts.getAll();
-  console.log(products);
   res.json(products);
 }
 
