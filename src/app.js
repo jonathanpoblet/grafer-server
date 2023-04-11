@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-// import { routerContact } from "./routers/routerContact.js";
+import { routerContact } from "./routers/routerContact.js";
 // import { routerProducts } from "./routers/routerProducts.js";
 // import { routerMPago } from "./routers/routerMPago.js";
 
@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 app.use(cors({origin: {}}))
 
-// app.use("/api/contact", routerContact);
+app.use("/api/contact", routerContact);
 // app.use("/api/products", routerProducts);
 // app.use("/mpago",routerMPago);
 app.use('/', (req,res) => {
