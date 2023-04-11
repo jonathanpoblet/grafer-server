@@ -3,8 +3,12 @@ import cors from "cors";
 import { routerContact } from "./routers/routerContact.js";
 import { routerProducts } from "./routers/routerProducts.js";
 import { routerMPago } from "./routers/routerMPago.js";
+import { PORT } from "./config/config.js";
+
 
 export const app = express();
+
+app.listen(PORT)
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
