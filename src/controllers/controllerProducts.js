@@ -91,7 +91,7 @@ export async function controllerPostSendProduct(req, res) {
   if(user.name && user.email && user.surname && product.title && product.price) {
     await transporter.sendMail({
       from: 'Servidor Node.js',
-      to: 'jonathanpoblet228@gmail.com',
+      to: 'grafer1965@hotmail.com',
       subject: 'Compra realizada',
       html: `<h3>Nueva compra de:</h3><p>Nombre: ${user.name} ${user.surname}</p><p>Email: ${user.email}</p><p>Producto: ${product.title}</p><p>Precio: ${product.price}</p><a href='${product.pdf}'>Link del producto digital</a>`
   })
