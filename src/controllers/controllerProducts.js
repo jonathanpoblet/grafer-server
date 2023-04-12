@@ -93,14 +93,14 @@ export async function controllerPostSendProduct(req, res) {
       from: 'Servidor Node.js',
       to: 'grafer1965@hotmail.com',
       subject: 'Compra realizada',
-      html: `<h2>Nueva compra de:</h2><h4>Nombre: ${user.name} ${user.surname}</h4><h4>Email: ${user.email}</h4><h4>Producto: ${product.title}</h4><h4>Precio: ${product.price}</h4><button style='padding=5px; background-color: #1cb85f'><a style='text-decoration:none; color: #fff;' href='${product.pdf}'>Producto digital</a></button>`
+      html: `<h3>Nueva compra de:</h3><h4>Nombre: ${user.name} ${user.surname}</h4><h4>Email: ${user.email}</h4><h4>Producto: ${product.title}</h4><h4>Precio: ${product.price}</h4><button style='padding:7px; background-color: #1cb85f; color: #fff;'><a style='text-decoration:none; color: #fff;' href='${product.pdf}'>Producto digital</a></button>`
   })
 
   await transporter.sendMail({
     from: 'Servidor Node.js',
     to: user.email,
     subject: 'Compra realizada',
-    html: `<h2>Nueva compra</h2><h3>Felicidades por tu nueva compra! A continuación te dejo los datos del producto y el link para acceder al pdf completo</h3><h4>Producto: ${product.title}</h4><h4>Precio: ${product.price}</h4><button style='padding=5px; background-color: #1cb85f'><a style='text-decoration:none; color: #fff;' href='${product.pdf}'>Producto digital</a></button>`
+    html: `<h3>Nueva compra</h3><h4>Felicidades por tu nueva compra! A continuación te dejo los datos del producto y el link para acceder al pdf completo</h4><h5>Producto: ${product.title}</h5><h5>Precio: ${product.price}</h5><button style='padding:7px; background-color: #1cb85f; color: #fff;'><a style='text-decoration:none; color: #fff;' href='${product.pdf}'>Producto digital</a></button>`
   })
     res.json({ succesfull: "Emails send" });
   } else res.status(404).json({error: 'Faltan datos de envio'});
