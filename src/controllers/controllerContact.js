@@ -6,7 +6,7 @@ export async function controllerPostEmail(req, res) {
   if(contact.name && contact.email && contact.title && contact.message) {
     await transporter.sendMail({
       from: 'Servidor Node.js',
-      to: 'grafer1965@hotmail.com',
+      to: 'grafer1357@gmail.com',
       subject: 'Consulta nueva',
       html: `<h4>Nueva consulta de:</h4><p>Nombre: ${contact.name}</p><p>Email: ${contact.email}</p><div><p>Titulo: ${contact.title}</p><p>Mensaje: ${contact.message}</p><br></div>`
   })
