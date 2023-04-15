@@ -20,7 +20,7 @@ export const createCheckout = async (req, res) => {
         email: user.email,
       }
   
-  
+      //payment link
       let link = await generatePaymentLink(items, payer, req);
   
       res.status(201).json({ "link": link?.body.init_point })
