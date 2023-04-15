@@ -1,7 +1,5 @@
 import mercadopago from "mercadopago";
-
-const clientSecret = 'Y5BQ0gDYPJR1SMzKABIRK0qG8fWo6PlE';
-const clientId = '1642877684723477';
+import { clientId, clientSecret } from "../config/config.js";
 
 export const generatePaymentLink = async (items, payer, req) => {
 

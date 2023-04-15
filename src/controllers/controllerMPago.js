@@ -11,7 +11,7 @@ export const createCheckout = async (req, res) => {
         description: "Grafer Product",
         quantity: 1,
         unit_price: product.price,
-        pdf: product.prf
+        pdf: product.pdf
       }];
   
       const payer = {

@@ -1,10 +1,11 @@
 import { createTransport } from 'nodemailer';
+import { email, password } from '../config/config.js';
 
 export const transporter = createTransport({
     service: 'gmail',
     port: 587,
     auth: {
-        user: 'grafer1357@gmail.com',
-        pass: 'naprwpnysngwmght'
+        user: email,
+        pass: password
     }
 });
